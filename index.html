@@ -3,183 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Stack Developer & AI Enthusiast</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Rajeshwaran K | Software Engineer</title>
+    <link rel="stylesheet" href="modern-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Rajeshwaran K</div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            
-            <div class="hero">
-                <div class="hero-content">
-                    <h1>Full Stack Developer & <span class="highlight">Generative AI</span> Enthusiast</h1>
-                    <p>Building scalable, adaptable solutions across diverse platforms and ecosystems</p>
-                    <a href="#contact" class="btn">Get In Touch</a>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="toggle-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="toggle-ball"></div>
+        </label>
+    </div>
+
+    <div class="cursor-follower"></div>
+    
+    <div class="split-layout">
+        <!-- Add custom mobile navigation toggle button -->
+        <button class="mobile-nav-toggle">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        
+        <nav class="side-nav">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-text">Rajeshwaran K</span>
                 </div>
-                <div class="hero-image">
-                    <div class="profile-pic-container">
-                        <img src="./Screenshot 2025-02-27 220419.png" alt="Full Stack Developer" class="profile-pic">
+                <div class="nav-links">
+                    <a href="#hero" class="nav-item active" data-section="hero">
+                        <span class="nav-label"><i class="fas fa-home"></i><span>Home</span></span>
+                    </a>
+                    <a href="#about" class="nav-item" data-section="about">
+                        <span class="nav-label"><i class="fas fa-user"></i><span>About</span></span>
+                    </a>
+                    <a href="#skills" class="nav-item" data-section="skills">
+                        <span class="nav-label"><i class="fas fa-code"></i><span>Skills</span></span>
+                    </a>
+                    <a href="#approach" class="nav-item" data-section="approach">
+                        <span class="nav-label"><i class="fas fa-compass"></i><span>Approach</span></span>
+                    </a>
+                    <a href="#contact" class="nav-item" data-section="contact">
+                        <span class="nav-label"><i class="fas fa-envelope"></i><span>Contact</span></span>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:ramseetha4249@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/rajeshwaran-k-38129821b/" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Rajeshwaran7" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://medium.com/@19cmu099" target="_blank" class="social-icon" title="Medium"><i class="fab fa-medium"></i></a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="content">
+            <section id="hero" class="hero-section">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <h1 class="glitch-text">Software Engineer & <span class="accent">Generative AI</span> Enthusiast</h1>
+                        <p class="subtitle">Building scalable, adaptable solutions across diverse platforms and ecosystems</p>
+                        <div class="cta-container">
+                            <a href="#contact" class="cta-button">Get In Touch</a>
+                            <div class="scroll-indicator">
+                                <span>Scroll Down</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="blob-container">
+                            <div class="blob blob-1"></div>
+                            <div class="blob blob-2"></div>
+                            <div class="blob blob-3"></div>
+                        </div>
+                        <div class="floating-elements">
+                            
+                            <div class="floating-element fe-1"><i class="fab fa-react"></i></div>
+                            <div class="floating-element fe-2"><i class="fab fa-node-js"></i></div>
+                            <div class="floating-element fe-3"><i class="fab fa-python"></i></div>
+                            <div class="floating-element fe-4"><i class="fab fa-java"></i></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
+            </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="./Screenshot 2025-02-27 220419.png" alt="Full Stack Developer" class="about-pic">
+            <section id="about" class="about-section">
+                <div class="section-header">
+                    <span class="section-indicator">01</span>
+                    <h2 class="section-title">About Me</h2>
                 </div>
-                <div class="about-text">
-                    <p>
-                        As a tech-agnostic Full Stack Developer and Generative AI enthusiast, I specialize in crafting scalable, 
-                        adaptable solutions across diverse platforms and ecosystems. With expertise in Node.js, NestJS, React, 
-                        Angular, and Python, I design and implement robust microservices and APIs while ensuring seamless 
-                        integration with both SQL and NoSQL databases.
-                    </p>
-                    <p>
-                        My approach prioritizes flexibility and efficiency, enabling smooth deployment across any cloud environment—be 
-                        it AWS, Azure, or GCP. I have hands-on experience with modern architectures, including monorepos, 
-                        event-driven systems, and containerized deployments.
-                    </p>
-                    <p>
-                        I thrive in Agile environments, emphasizing clean code practices, test-driven development (TDD), CI/CD 
-                        pipelines, and collaborative problem-solving to deliver impactful, future-proof solutions. My passion 
-                        extends to Generative AI applications, where I integrate AI-driven insights to streamline workflows, 
-                        automate processes, and drive intelligent decision-making.
-                    </p>
-                    <p>
-                        Let's connect and explore how technology can unlock innovation and deliver transformative results.
-                    </p>
+                <div class="about-container">
+                    <div class="about-image glass-card">
+                        <img src="./Screenshot 2025-02-27 220419.png" alt="Rajeshwaran K" class="about-pic">
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            As a tech-agnostic Full Stack Developer and Generative AI enthusiast, I specialize in crafting scalable, 
+                            adaptable solutions across diverse platforms and ecosystems. With expertise in Node.js, NestJS, React, 
+                            Angular, and Python, I design and implement robust microservices and APIs while ensuring seamless 
+                            integration with both SQL and NoSQL databases.
+                        </p>
+                        <p>
+                            My approach prioritizes flexibility and efficiency, enabling smooth deployment across any cloud environment—be 
+                            it AWS, Azure, or GCP. I have hands-on experience with modern architectures, including monorepos, 
+                            event-driven systems, and containerized deployments.
+                        </p>
+                        <p>
+                            I thrive in Agile environments, emphasizing clean code practices, test-driven development (TDD), CI/CD 
+                            pipelines, and collaborative problem-solving to deliver impactful, future-proof solutions. My passion 
+                            extends to Generative AI applications, where I integrate AI-driven insights to streamline workflows, 
+                            automate processes, and drive intelligent decision-making.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Languages & Frameworks</h3>
-                    <ul>
-                        <li>JavaScript/TypeScript</li>
-                        <li>Node.js & NestJS</li>
-                        <li>React & Angular</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>J2EE</li>
-                        <li>Spring Boot</li>
-                    </ul>
+            <section id="skills" class="skills-section">
+                <div class="section-header">
+                    <span class="section-indicator">02</span>
+                    <h2 class="section-title">Skills & Expertise</h2>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Databases</h3>
-                    <ul>
-                        <li>SQL (PostgreSQL, MySQL)</li>
-                        <li>NoSQL (MongoDB, DynamoDB)</li>
-                        <li>Data Modeling</li>
-                        <li>Performance Optimization</li>
-                    </ul>
+                <div class="skills-grid">
+                    <div class="skill-card glass-card" data-tilt>
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Languages & Frameworks</h3>
+                        <ul>
+                            <li>JavaScript/TypeScript</li>
+                            <li>Node.js & NestJS</li>
+                            <li>React & Angular</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>J2EE</li>
+                            <li>Spring Boot</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card glass-card" data-tilt>
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Databases</h3>
+                        <ul>
+                            <li>SQL (PostgreSQL, MySQL)</li>
+                            <li>NoSQL (MongoDB, DynamoDB)</li>
+                            <li>Data Modeling</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card glass-card" data-tilt>
+                        <div class="skill-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud & DevOps</h3>
+                        <ul>
+                            <li>AWS, Azure, GCP</li>
+                            <li>Docker & Kubernetes</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Infrastructure as Code</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card glass-card" data-tilt>
+                        <div class="skill-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI & ML</h3>
+                        <ul>
+                            <li>Generative AI Applications</li>
+                            <li>AI Integration</li>
+                            <li>Workflow Automation</li>
+                            <li>Intelligent Systems</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-cloud"></i>
-                    <h3>Cloud & DevOps</h3>
-                    <ul>
-                        <li>AWS, Azure, GCP</li>
-                        <li>Docker & Kubernetes</li>
-                        <li>CI/CD Pipelines</li>
-                        <li>Infrastructure as Code</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-robot"></i>
-                    <h3>AI & ML</h3>
-                    <ul>
-                        <li>Generative AI Applications</li>
-                        <li>AI Integration</li>
-                        <li>Workflow Automation</li>
-                        <li>Intelligent Systems</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">My Approach</h2>
-            <div class="experience-cards">
-                <div class="exp-card">
-                    <div class="exp-icon"><i class="fas fa-sitemap"></i></div>
-                    <h3>Architecture Design</h3>
-                    <p>Designing scalable systems using microservices, event-driven architectures, and monorepos.</p>
+            <section id="approach" class="approach-section">
+                <div class="section-header">
+                    <span class="section-indicator">03</span>
+                    <h2 class="section-title">My Approach</h2>
                 </div>
-                <div class="exp-card">
-                    <i class="fas fa-code-branch"></i>
-                    <h3>Clean Code Practices</h3>
-                    <p>Emphasizing readability, maintainability, and test-driven development.</p>
+                <div class="approach-grid">
+                    <div class="approach-card glass-card" data-tilt>
+                        <div class="approach-number">01</div>
+                        <div class="approach-icon"><i class="fas fa-sitemap"></i></div>
+                        <div class="approach-content">
+                            <h3>Architecture Design</h3>
+                            <p>Designing scalable systems using microservices, event-driven architectures, and monorepos.</p>
+                        </div>
+                    </div>
+                    <div class="approach-card glass-card" data-tilt>
+                        <div class="approach-number">02</div>
+                        <div class="approach-icon"><i class="fas fa-code-branch"></i></div>
+                        <div class="approach-content">
+                            <h3>Clean Code Practices</h3>
+                            <p>Emphasizing readability, maintainability, and test-driven development.</p>
+                        </div>
+                    </div>
+                    <div class="approach-card glass-card" data-tilt>
+                        <div class="approach-number">03</div>
+                        <div class="approach-icon"><i class="fas fa-users"></i></div>
+                        <div class="approach-content">
+                            <h3>Agile Collaboration</h3>
+                            <p>Thriving in collaborative environments with focus on continuous improvement.</p>
+                        </div>
+                    </div>
+                    <div class="approach-card glass-card" data-tilt>
+                        <div class="approach-number">04</div>
+                        <div class="approach-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="approach-content">
+                            <h3>Deployment Excellence</h3>
+                            <p>Implementing robust CI/CD pipelines for reliable, efficient deployments.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="exp-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Agile Collaboration</h3>
-                    <p>Thriving in collaborative environments with focus on continuous improvement.</p>
-                </div>
-                <div class="exp-card">
-                    <i class="fas fa-rocket"></i>
-                    <h3>Deployment Excellence</h3>
-                    <p>Implementing robust CI/CD pipelines for reliable, efficient deployments.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p>Interested in collaborating? Let's connect and explore how we can work together!</p>
-                <div class="contact-links">
-                    <a href="mailto:your-email@example.com" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>ramseetha4249@gmail.com</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/rajeshwaran-k-38129821b/" target="_blank" class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/Rajeshwaran7" target="_blank" class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://medium.com/@19cmu099" target="_blank" class="contact-item">
-                        <i class="fab fa-medium"></i>
-                        <span>Medium</span>
-
-                    </a>
+            <section id="contact" class="contact-section">
+                <div class="section-header">
+                    <span class="section-indicator">04</span>
+                    <h2 class="section-title">Get In Touch</h2>
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="contact-container">
+                    <div class="contact-info glass-card">
+                        <p>Interested in collaborating? Let's connect and explore how we can work together!</p>
+                        <div class="contact-links">
+                            <a href="mailto:ramseetha4249@gmail.com" class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>ramseetha4249@gmail.com</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/rajeshwaran-k-38129821b/" target="_blank" class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/Rajeshwaran7" target="_blank" class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://medium.com/@19cmu099" target="_blank" class="contact-item">
+                                <i class="fab fa-medium"></i>
+                                <span>Medium</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-form glass-card">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Full Stack Developer Portfolio. All rights reserved.</p>
-        </div>
+        <p>&copy; 2025 Rajeshwaran K. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html> 

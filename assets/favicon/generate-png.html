@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert SVG to PNG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin: 1rem;
+        }
+        .button {
+            background: #4361ee;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>SVG to PNG Converter</h1>
+    <p>Use this to generate PNG versions of your favicon</p>
+    
+    <div>
+        <img id="svg-image" src="favicon.svg" width="64" height="64" alt="SVG Favicon">
+        <canvas id="canvas-32" width="32" height="32"></canvas>
+        <canvas id="canvas-16" width="16" height="16"></canvas>
+    </div>
+    
+    <div>
+        <button class="button" onclick="convertToPNG(32)">Generate 32x32 PNG</button>
+        <button class="button" onclick="convertToPNG(16)">Generate 16x16 PNG</button>
+    </div>
+    
+    <div id="download-links"></div>
+    
+    <script>
+        function convertToPNG(size) {
+            const canvas = document.getElementById(`canvas-${size}`);
+            const ctx = canvas.getContext('2d');
+            const img = document.getElementById('svg-image');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Draw SVG to canvas
+            ctx.drawImage(img, 0, 0, size, size);
+            
+            // Convert to PNG
+            const pngDataUrl = canvas.toDataURL('image/png');
+            
+            // Create download link
+            const downloadDiv = document.getElementById('download-links');
+            const link = document.createElement('a');
+            link.href = pngDataUrl;
+            link.download = `favicon-${size}x${size}.png`;
+            link.textContent = `Download ${size}x${size} PNG`;
+            link.style.display = 'block';
+            link.style.margin = '1rem';
+            
+            downloadDiv.appendChild(link);
+        }
+        
+        // Wait for image to load before allowing conversion
+        document.getElementById('svg-image').onload = function() {
+            document.querySelectorAll('.button').forEach(button => {
+                button.disabled = false;
+            });
+        };
+    </script>
+</body>
+</html> 

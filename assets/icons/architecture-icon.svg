@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="architectureGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fd8e3e" />
+      <stop offset="100%" stop-color="#fe5858" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <circle cx="40" cy="40" r="35" fill="url(#architectureGradient)" filter="url(#shadow)" />
+  <g fill="white">
+    <rect x="20" y="50" width="40" height="5" rx="2" />
+    <rect x="25" y="40" width="5" height="10" rx="1" />
+    <rect x="37.5" y="35" width="5" height="15" rx="1" />
+    <rect x="50" y="30" width="5" height="20" rx="1" />
+    <circle cx="27.5" cy="30" r="3" />
+    <circle cx="40" cy="25" r="3" />
+    <circle cx="52.5" cy="20" r="3" />
+    <path d="M27.5,30 L40,25 L52.5,20" fill="none" stroke="white" stroke-width="2" />
+  </g>
+</svg> 

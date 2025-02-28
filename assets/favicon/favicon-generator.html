@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+        .preview {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .favicon {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            background: linear-gradient(45deg, #7209b7, #4361ee);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+        }
+        .favicon.dark {
+            background: linear-gradient(45deg, #bf5af2, #5e81fc);
+        }
+        .favicon.square {
+            border-radius: 0;
+        }
+        .favicon.circle {
+            border-radius: 50%;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            background: #4361ee;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Favicon Generator for Rajeshwaran K</h1>
+    
+    <div class="preview">
+        <div>
+            <p>Light Theme (Rounded)</p>
+            <div class="favicon" id="light-rounded">RK</div>
+        </div>
+        <div>
+            <p>Dark Theme (Rounded)</p>
+            <div class="favicon dark" id="dark-rounded">RK</div>
+        </div>
+        <div>
+            <p>Light Theme (Square)</p>
+            <div class="favicon square" id="light-square">RK</div>
+        </div>
+        <div>
+            <p>Light Theme (Circle)</p>
+            <div class="favicon circle" id="light-circle">RK</div>
+        </div>
+    </div>
+    
+    <div>
+        <button onclick="generateSVG('light-rounded')">Generate Light Rounded SVG</button>
+        <button onclick="generateSVG('dark-rounded')">Generate Dark Rounded SVG</button>
+        <button onclick="generateSVG('light-square')">Generate Light Square SVG</button>
+        <button onclick="generateSVG('light-circle')">Generate Light Circle SVG</button>
+    </div>
+    
+    <textarea id="svg-output" placeholder="SVG code will appear here..."></textarea>
+    
+    <p>Instructions:</p>
+    <ol>
+        <li>Select your preferred favicon style by clicking the corresponding button</li>
+        <li>Copy the generated SVG code</li>
+        <li>Save it as favicon.svg</li>
+        <li>Use a tool like <a href="https://favicon.io/favicon-converter/" target="_blank">favicon.io</a> to convert to multiple formats</li>
+    </ol>
+    
+    <script>
+        function generateSVG(id) {
+            const element = document.getElementById(id);
+            const isLight = !element.classList.contains('dark');
+            const isSquare = element.classList.contains('square');
+            const isCircle = element.classList.contains('circle');
+            
+            let gradientColors = isLight 
+                ? ['#7209b7', '#4361ee'] 
+                : ['#bf5af2', '#5e81fc'];
+            
+            let borderRadius = '12';
+            if (isSquare) borderRadius = '0';
+            if (isCircle) borderRadius = '32';
+            
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="${gradientColors[0]}" />
+            <stop offset="100%" stop-color="${gradientColors[1]}" />
+        </linearGradient>
+    </defs>
+    <rect width="64" height="64" rx="${borderRadius}" fill="url(#gradient)" />
+    <text x="32" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">RK</text>
+</svg>`;
+            
+            document.getElementById('svg-output').value = svg;
+        }
+    </script>
+</body>
+</html> 

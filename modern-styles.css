@@ -975,18 +975,64 @@ section {
   display: flex;
   flex-direction: column;
   transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.skill-card:nth-child(1)::before {
+  background: linear-gradient(to right, #7209b7, #4361ee);
+}
+
+.skill-card:nth-child(2)::before {
+  background: linear-gradient(to right, #00c2a8, #4361ee);
+}
+
+.skill-card:nth-child(3)::before {
+  background: linear-gradient(to right, #4361ee, #3f37c9);
+}
+
+.skill-card:nth-child(4)::before {
+  background: linear-gradient(to right, #7209b7, #00c2a8);
+}
+
+.skill-card:hover::before {
+  opacity: 1;
 }
 
 .skill-icon {
-  font-size: 2.5rem;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.light-mode .skill-icon {
+.skill-icon img {
+  width: 80px;
+  height: 80px;
+  transition: transform var(--transition-normal);
+  opacity: 0;
+  transform: scale(0);
+}
+
+.skill-card:hover .skill-icon img {
+  transform: scale(1.1);
+}
+
+.light-mode .skill-icon i {
   color: var(--accent-primary-light);
 }
 
-.dark-mode .skill-icon {
+.dark-mode .skill-icon i {
   color: var(--accent-primary-dark);
 }
 
@@ -1040,6 +1086,41 @@ section {
   padding: 30px;
   position: relative;
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.approach-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.approach-card:nth-child(1)::before {
+  background: linear-gradient(to right, #fd8e3e, #fe5858);
+}
+
+.approach-card:nth-child(2)::before {
+  background: linear-gradient(to right, #02c39a, #00a896);
+}
+
+.approach-card:nth-child(3)::before {
+  background: linear-gradient(to right, #3a86ff, #8338ec);
+}
+
+.approach-card:nth-child(4)::before {
+  background: linear-gradient(to right, #ff006e, #8338ec);
+}
+
+.approach-card:hover::before {
+  opacity: 1;
 }
 
 .approach-number {
@@ -1069,14 +1150,20 @@ section {
 .approach-icon {
   font-size: 2rem;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.light-mode .approach-icon {
-  color: var(--accent-primary-light);
+.approach-icon img {
+  width: 80px;
+  height: 80px;
+  transition: transform var(--transition-normal);
+  opacity: 0;
+  transform: scale(0);
 }
 
-.dark-mode .approach-icon {
-  color: var(--accent-primary-dark);
+.approach-card:hover .approach-icon img {
+  transform: scale(1.1);
 }
 
 .approach-content h3 {
@@ -1541,4 +1628,20 @@ footer {
 /* Navigation open state for mobile */
 body.nav-open {
   overflow: hidden;
+}
+
+/* Skill Icon Animation */
+@keyframes skill-icon-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 } 

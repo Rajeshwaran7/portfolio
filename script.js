@@ -154,6 +154,26 @@ function initScrollAnimations() {
         // Add animated class for CSS animations
         element.classList.add('animated');
     });
+    
+    // Add special animation for skill and approach icons
+    const iconObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add staggered animation to each icon
+                const img = entry.target.querySelector('img');
+                if (img) {
+                    img.style.animation = 'skill-icon-pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards';
+                    img.style.animationDelay = `${parseInt(entry.target.dataset.index) * 0.15}s`;
+                }
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    // Set index for staggered animations on skill cards and approach cards
+    document.querySelectorAll('.skill-card, .approach-card').forEach((card, index) => {
+        card.setAttribute('data-index', index % 4); // Reset index after 4 to keep delays consistent
+        iconObserver.observe(card);
+    });
 }
 
 // Form submission handler
